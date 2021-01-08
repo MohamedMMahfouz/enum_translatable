@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 
-The Gem will add 1 core method into your selected model.
+The Gem will some methods into your selected model similar to what globalize gem adds to a translated field.
 for example if we have the following class
 ````ruby
 class Order  < ApplicationRecord
@@ -46,7 +46,7 @@ end
 ````
 and adding the translations in your local.yml
 ````yml
-#en.ym
+#en.yml
 en:
   activerecord:
     enum_translatable:
@@ -57,7 +57,7 @@ en:
           approved: "approved"
 ````
 ````yml
-#ar.ym
+#ar.yml
 ar:
   activerecord:
     enum_translatable:
@@ -68,7 +68,7 @@ ar:
           approved: "approved in arabic"
 ````
 ````yml
-#es.ym
+#es.yml
 es:
   activerecord:
     enum_translatable:
