@@ -1,8 +1,6 @@
 # EnumTranslatable
 
-Gem that translates ruby on rails enums in a similar manner to i18n globalize gem.
-
-TODO: Delete this and the text above, and describe your gem
+A simple Gem that translates ruby on rails enums in a similar manner to I18n globalize gem.
 
 ## Installation
 
@@ -22,8 +20,82 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
 
+The Gem will add 1 core method into your selected model.
+for example if we have the following class
+````ruby
+class Order  < ApplicationRecord
+    enum status:{
+        pending: 0,
+        canceled: 1,
+        approved: 2,
+    }
+end
+````
+
+by adding the following
+````ruby
+class Order  < ApplicationRecord
+    enum status:{
+        pending: 0,
+        canceled: 1,
+        approved: 2,
+    }
+    include EnumTranslatable ##this has to be added after the last enum defined in your model which needs to be translated
+end
+````
+and adding the translations in your local.yml
+````yml
+#en.ym
+en:
+  activerecord:
+    enum_translatable:
+      order:
+        status:
+          canceled: "canceled"
+          pending: "pending"
+          approved: "approved"
+````
+````yml
+#ar.ym
+ar:
+  activerecord:
+    enum_translatable:
+      order:
+        status:
+          canceled: "canceled in arabic"
+          pending: "pending in arabic"
+          approved: "approved in arabic"
+````
+````yml
+#es.ym
+es:
+  activerecord:
+    enum_translatable:
+      order:
+        status:
+          canceled: "canceled in spanish"
+          pending: "pending in spanish"
+          approved: "approved in spanish"
+````
+it will add the following methods
+
+````ruby
+order = Order.first
+order.status # => "canceled"
+order.translated_status # => "canceled"
+order.status_en # => "canceled"
+order.status_ar # => "canceled in arabic"
+order.status_es # => "canceled in spanish"
+I18.locale = :ar
+Order.translated_status = "canceled in arabic"
+````
+
+Make sure to add the locales you want to use, other wise you will have a method for each I18n locale which is unecessary
+````ruby
+# in config/initializer/locale.rb
+I18n.available_locales = [:ar, :es, :en]
+````
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
