@@ -8,7 +8,7 @@ Make sure you add globalize gem https://github.com/globalize/globalize
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'enum_translatable', '~> 0.1.1'
+gem 'enum_translatable', '~> 0.1.3'
 ```
 
 And then execute:
