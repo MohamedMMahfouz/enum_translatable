@@ -1,7 +1,7 @@
 # EnumTranslatable
 
 A simple Gem that translates ruby on rails enums in a similar manner to I18n globalize gem.
-
+Gem: https://rubygems.org/gems/enum_translatable
 ## Installation
 Make sure you add globalize gem https://github.com/globalize/globalize
 
