@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mohamedmmahfouz24@gmail.com"]
 
   spec.summary       = %q{Gem for translating enums with i18n.}
-  spec.description   = %q{ROR gem which utilize metaprogramming and i18n to translate enums.}
+  spec.description   = %q{ROR gem which to translate enums just like I18n Globalize gem}
   spec.homepage      = "https://github.com/MohamedMMahfouz/enum_translatable"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    enum_translatable (0.1.1)
+    enum_translatable (0.1.2)
       globalize
 
 GEM
