@@ -96,7 +96,7 @@ I18.locale = :es
 order.status = "canceled in spanish"
 ````
 
-Make sure to add the locales you want to use, other wise you will have a method for each I18n locale which is unecessary
+Make sure to add the locales you want to use, other wise you will have a method for each I18n locale which is unnecessary
 ````ruby
 # in config/initializer/locale.rb
 I18n.available_locales = [:ar, :es, :en]
