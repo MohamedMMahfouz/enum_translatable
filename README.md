@@ -83,14 +83,16 @@ es:
 it will add the following methods
 
 ````ruby
+#default locale is :en
 order = Order.first
 order.status # => "canceled"
-order.translated_status # => "canceled"
 order.status_en # => "canceled"
 order.status_ar # => "canceled in arabic"
 order.status_es # => "canceled in spanish"
 I18.locale = :ar
-Order.translated_status = "canceled in arabic"
+order.status = "canceled in arabic"
+I18.locale = :es
+order.status = "canceled in spanish"
 ````
 
 Make sure to add the locales you want to use, other wise you will have a method for each I18n locale which is unecessary
