@@ -42,9 +42,10 @@ class Order  < ApplicationRecord
         approved: 2,
     }
     include EnumTranslatable ##this has to be added after the last enum defined in your model which needs to be translated
+    #Note: Adding this line will translate ALL the enums defined above it.
 end
 ````
-and adding the translations in your local.yml
+Then adding the translations in your local.yml
 ````yml
 #en.yml
 en:
