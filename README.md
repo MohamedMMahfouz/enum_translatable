@@ -22,7 +22,7 @@ Or install it yourself as:
 ## Usage
 
 
-The Gem will some methods into your selected model similar to what globalize gem adds to a translated field.
+The Gem will add some methods into your selected model similar to what globalize gem adds to a translated field.
 for example if we have the following class
 ````ruby
 class Order  < ApplicationRecord
