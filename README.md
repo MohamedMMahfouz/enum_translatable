@@ -90,9 +90,9 @@ order.status # => "canceled"
 order.status_en # => "canceled"
 order.status_ar # => "canceled in arabic"
 order.status_es # => "canceled in spanish"
-I18.locale = :ar
+I18n.locale = :ar
 order.status = "canceled in arabic"
-I18.locale = :es
+I18n.locale = :es
 order.status = "canceled in spanish"
 ````
 
